@@ -24,6 +24,7 @@ public class UniqueWordCombination {
 			sb.append((dict.get(i).length())-2);
 			sb.append(dict.get(i).charAt(dict.get(i).length()-1));
 			hm.put(dict.get(i),sb.toString());
+			
 		}
 		if(hm.containsValue(s1.toString())){
 			if(hm.containsKey(string)) {
