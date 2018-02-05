@@ -2,7 +2,9 @@
 public class NumberOfIslands {
 
 	public static void main(String[] args) {
-		char[][] arr = {};
+		char[][] arr = {{'0','1','1'},
+						{'1','0','0'},
+						{'0','0','1'}};
 		int res = numIslands(arr);
 		System.out.println(res);
 

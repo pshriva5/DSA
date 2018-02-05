@@ -77,7 +77,6 @@ public class LicenceKeyFormatting {
 	    	}
 	    	if(i!=Str.length()-1 && i==firstG){
 	    		sb.append("-");
-	    		
 	    		}
 	        sb.append(Str.charAt(i));
 	        count++;

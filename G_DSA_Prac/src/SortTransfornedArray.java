@@ -23,8 +23,7 @@ public class SortTransfornedArray {
 			int k = a2*(arr2[i]*arr2[i]) + b2*(arr2[i]) + c2;
 			queue.add(k);
 		}
-		for(int i=0; i<arr2.length
-				;i++) {
+		for(int i=0; i<arr2.length;i++) {
 			res[i]=queue.poll();
 		}
 		return res;

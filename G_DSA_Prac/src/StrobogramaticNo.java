@@ -2,26 +2,43 @@
 public class StrobogramaticNo {
 
 	public static void main(String[] args) {
-		String st = "639";
-		boolean res = isStrobogramatic(st);
+		String st = "818";
+		boolean res = isStrobogrammatic(st);
 		System.out.println(res);
 
 	}
 
-	private static boolean isStrobogramatic(String st) {
-		int l = 0;
-		int r = st.length()-1;
-		while(l!=r) {
-			if(!(st.charAt(l)=='6')||!(st.charAt(l)=='9')|| !(st.charAt(l)=='8') || !(st.charAt(l)=='1') || !(st.charAt(l)=='0')) {
-				return false;
-		}
-			if(st.charAt(l)!=st.charAt(r)) {
-				return false;
-			}
-			l++;
-			r--;
-	}
-		return true;
+	public static boolean isStrobogrammatic(String num) {
+        int start = 0;
+        int end = num.length() - 1;
+        while (start <= end) {
+            switch(num.charAt(start)) {
+                case '0':
+                case '1':
+                case '8':
+                    if (num.charAt(end) != num.charAt(start)) {
+                        return false;
+                    }
+                    break;
+                case '6':
+                    if (num.charAt(end) != '9') {
+                        return false;
+                    }
+                    break;
+                case '9':
+                    if (num.charAt(end) != '6') {
+                        return false;
+                    }
+                    break;
+                default:
+                    return false;
+            }
+            start++;
+            end--;
+        }
+        return true;
+    }
+}
 
 //	private static boolean isStrobogramatic(String num) {
 //		for (int i=0, j=num.length()-1; i <= j; i++, j--)
@@ -29,6 +46,4 @@ public class StrobogramaticNo {
 //	            return false;
 //	    return true;
 		
-	}
 
-}

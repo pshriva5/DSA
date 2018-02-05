@@ -43,17 +43,17 @@ public class GameOfLife {
              }
          }
      }
-     
-     private static int getNeighbour(int[][] board, int row, int col){
-         int cnt=0;
-         for(int i=row-1;i<=row+1;++i){
-             for(int j=col-1;j<=col+1;++j){
-                 if(i>=0 && i<board.length && j>=0 && j<board[0].length &&(board[i][j]==1 || board[i][j]==3)){
-                	 cnt++;
-                 }
-             }
-         }
-         if(board[row][col]==1||board[row][col]==3) cnt--;
-         return cnt;
-     }
+	public static int getNeighbour(int[][] board, int row, int col){
+        int cnt=0;
+        for(int i=row-1;i<=row+1;++i){
+            for(int j=col-1;j<=col+1;++j){
+                if(i>=0 && i<board.length && j>=0 && j<board[0].length &&(board[i][j]==1 || board[i][j]==3)){
+               	 cnt++;
+                }
+            }
+        }
+        if(board[row][col]==1||board[row][col]==3) cnt--;
+        return cnt;
+    }
+
  }

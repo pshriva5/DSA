@@ -26,7 +26,7 @@ public class GeneralizedAbbreviation {
 			}
 			for(int j=0; j<str.length();j++) {
 				if(j+counter<=str.length()) {
-				String abbr = str.substring(0, j) + counter+ str.substring(j+counter);
+				String abbr = str.substring(0, j) + counter+str.substring(j+counter);
 				res.add(abbr);}
 				
 			}
